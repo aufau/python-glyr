@@ -8,6 +8,7 @@ There more for testing if the actual function passthrough works.
 """
 
 class TestMisc(unittest.TestCase):
+    @unittest.expectedFailure
     def test_download(self):
         google_com = plyr.download('www.google.de')
         self.assertTrue(len(google_com.data) > 0)
